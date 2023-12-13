@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somos</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <link rel="stylesheet" href="css/style_somos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a th:href="index.html">
+                <img src="img/logo.png" alt="Logo do Site" />
+            </a>
+        </div>
+
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a th:href="somos">Somos</a></li>
+                <li class="active"><a href="#">Reserva</a>
+                    <ul class="dropdown">
+                        <li><a th:href="fauna">Fauna</a></li>
+                        <li><a href="#">Flora</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="h-right ">
+            <!-- <a href="#">Siga-nos</a> -->
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a th:href="login">Cadastro</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section id="teste" class="teste">
+        <div class="teste-img">
+            <img src="img/phone_frame1.png">
+        </div>
+        <div class="teste-text">
+            <h5>Projeto educação ambiental</h5>
+            <h2>Porque será diferente?</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ex error maxime perferendis
+                provident beatae nisi nobis molestiae quis, alias labore consequuntur laborum ea architecto, unde
+                officia dignissimos praesentium aspernatur.</p>
+        </div>
+
+        <div class="teste-feature-content">
+            <div class="teste-row">
+                <div class="teste-row-img">
+                    <img src="img/info.svg" />
+                </div>
+                <div class="teste-texto-1">
+                    <h4>Informativo</h4>
+                    <p>Informações sobre a fauna e flora local</p>
+                </div>
+            </div>
+
+            <div class="teste-row teste-left">
+                <div class="teste-row-img teste-left-image">
+                    <img src="img/map-pin-marker.svg" />
+                </div>
+                <h4>Mapeamento</h4>
+                <p>Consiga se localizar e ver os percusos das trilhas mais famosas da reserva ambiental</p>
+            </div>
+
+            <div class="teste-row teste-left">
+                <div class="teste-row-img teste-left-image">
+                    <img src="img/camera-photo.svg" />
+                </div>
+                <h4>Camera</h4>
+                <p>Use sua camera pra escanear nossos totens para uma experiencia divertida.</p>
+            </div>
+
+            <div class="teste-row teste-left ult-img">
+                <div class="teste-row-img teste-left-image">
+                    <img src="img/question-mark.svg" />
+                </div>
+                <div class="teste-texto-2">
+                    <h4>Curiosidades</h4>
+                    <p>Veja varias curiosidades locais e sobre as especies presentes na região.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Awesome <span>Features</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel features-carousel">
+                    <div class="feature-item">
+                        <div class="icon"><i class="ri-code-s-slash-line"></i></div>
+                        <h3>clean code</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit, modi expedita lorem lorem lorem lorem</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="ri-install-line"></i></div>
+                        <h3>Facil instalação</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit, modi expedita lorem lorem lorem lorem</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="ri-run-fill"></i></div>
+                        <h3>Rapido </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit, modi expedita lorem lorem lorem lorem</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="script/scriptSomos.js"></script>
+    <script src="script/scriptNav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/form_login.css">
+
+    <script src="script/login.js" defer></script>
+    <title>Login - Leonid</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a th:href="index.html">
+                <img src="img/logo.png" alt="Logo do Site" />
+            </a>
+        </div>
+
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a th:href="somos">Somos</a></li>
+                <li class="active"><a href="#">Reserva</a>
+                    <ul class="dropdown">
+                        <li><a th:href="fauna">Fauna</a></li>
+                        <li><a href="#">Flora</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="h-right ">
+            <!-- <a href="#">Siga-nos</a> -->
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a th:href="login">Cadastro</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="login-container" id="login-container">
+            <div class="form-container">
+                <form class="form form-login" action="/autenticar" method="post">
+                    <h2 class="form-title">Entrar</h2>
+                    <div class="form-input-container">
+                        <input type="email" name="email" class="form-input" placeholder="Email">
+                        <input type="password" name="senha" class="form-input" placeholder="Senha" autocomplete="off">>
+                    </div>
+                    <button type="submit" class="form-button">Logar</button>
+
+                </form>
+                <form class="form form-register" action="/usuarios" method="post">
+                    <h2 class="form-title">Criar Conta</h2>
+
+                    <div class="form-input-container">
+                        <label for="opcoes">Tipo de conta:</label>
+                        <select id="opcoes" name="tipo" class="opcoes">
+                            <option value="CLIENTE">CLIENTE</option>
+                            <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                        </select>
+                        <input type="text" name="nome" class="form-input" placeholder="Nome">
+                        <input type="email" name="email" class="form-input" placeholder="Email">
+                        <input type="password" name="senha" class="form-input" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="form-button">Cadastrar</button>
+                </form>
+
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Já tem conta?</h2>
+                    <p class="form-text">Para entrar na nossa plataforma faça login com suas informações</p>
+                    <button class="form-button form-button-light" id="open-login">Entrar</button>
+                </div>
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Bem vindo!</h2>
+                    <p class="form-text">Cadastre-se e comece a explorar um pouco da reserva ambiental</p>
+                    <button class="form-button form-button-light" id="open-register">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

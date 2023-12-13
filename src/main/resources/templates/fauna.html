@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauna</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="css/style_lista.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a th:href="index.html">
+                <img src="img/logo.png" alt="Logo do Site" />
+            </a>
+        </div>
+
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a th:href="somos">Somos</a></li>
+                <li class="active"><a href="#">Reserva</a>
+                    <ul class="dropdown">
+                        <li><a th:href="fauna">Fauna</a></li>
+                        <li><a href="#">Flora</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="h-right ">
+            <!-- <a href="#">Siga-nos</a> -->
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a th:href="login">Cadastro</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div id="fundoEscurecido"></div>
+
+    <div class="container">
+        <form class="search-bar" id="filtro">
+            <select data-trigger="" id="filtroTipo" name="choices-single-defaul">
+                <option placeholder="" value="">Tipos</option>
+                <option value="ANFIBIO">Anfibios</option>
+                <option value="AVE">Aves</option>
+                <option value="INVERTEBRADOS">Invertebrados</option>
+                <option value="MAMIFERO">Mamiferos</option>
+                <option value="REPTIL">Repteis</option>
+            </select>
+            <input type="text" placeholder="Procurar" name="procurar">
+            <button type="submit" ame="submitButtonFiltro" value="Filtrar"><img src="img/busca.png"
+                    alt="botão de buscar"></button>
+
+        </form>
+
+        <div id="cardsContainer" class="cards-container">
+            <!-- Os cards dos animais serão adicionados aqui -->
+        </div>
+
+    </div>
+
+    <dialog id="dialogo" class="dialogo-container">
+
+        <div id="modal-info" class="modal-info">
+            <!-- Aqui serão exibidas as informações detalhadas do animal -->
+        </div>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script/scriptNav.js"></script>
+    <script src="script/scriptFauna.js"></script>
+
+</body>
+
+</html>

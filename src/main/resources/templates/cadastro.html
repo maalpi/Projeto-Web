@@ -1,0 +1,202 @@
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_cadastro.css" media="screen" />
+    
+    
+    <title>Gerenciamento</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a th:href="index.html">
+                <img src="img/logo.png" alt="Logo do Site" />
+            </a>
+        </div>
+
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a th:href="somos">Somos</a></li>
+                <li class="active"><a href="#">Reserva</a>
+                    <ul class="dropdown">
+                        <li><a th:href="fauna">Fauna</a></li>
+                        <li><a href="#">Flora</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="h-right ">
+            <!-- <a href="#">Siga-nos</a> -->
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a th:href="login">Cadastro</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div id="fundoEscurecido"></div>
+
+    <button id="meuBotao" class="botaoAcimaDiv button-17">FLORA</button>
+    <div class="formContainer">
+        <div class="leftSide on_esquerda" id="lado_esquerdo">
+            <div class="opacityNONE" id="esquerda">
+
+                <div class="formContentContainer">
+                    <h2 class="formHeader">Cadastrar Animais</h2>
+                    <form id="formAnimal">
+                        <label class="label" for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" class="formInput" placeholder="Nome" required />
+
+                        <label class="label" for="nomeCientifico">Nome Cientifico:</label>
+                        <input type="text" name="nomeCientifico" id="nomeCientifico" class="formInput"
+                            placeholder="Nome Cientifico" required />
+
+                        <label class="label" for="tipo">Tipo:</label>
+                        <select class="formInput" id="tipo" name="tipo" required>
+                            <option value="ANFIBIO">Anfibio</option>
+                            <option value="AVE">Ave</option>
+                            <option value="INVERTEBRADOS">Invertebrado</option>
+                            <option value="MAMIFERO">Mamifero</option>
+                            <option value="REPTIL">Reptil</option>
+                        </select>
+
+                        <label class="label" for="imagem">URL da imagem:</label>
+                        <input type="text" name="imagem" id="imagem" class="formInput" placeholder="URL da imagem"
+                            required />
+
+                        <label class="label" for="descricao">Descrição:</label>
+                        <textarea class="formArea" cols="30" rows="4" id="descricao" name="descricao"
+                            placeholder="Descrição" required></textarea>
+
+                        <input type="submit" class="submitButton" name="submitButton" value="Cadastrar Animal">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide off_direita" id="lado_direito">
+            <div class="opacity" id="direita">
+                <div class="formContentContainer">
+                    <h2 class="formHeader">Cadastrar Flora</h2>
+                    <form id="formAnimal">
+                        <label class="label" for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" class="formInput" placeholder="Nome" required />
+
+                        <label class="label" for="nomeCientifico">Nome Cientifico:</label>
+                        <input type="text" name="nomeCientifico" id="nomeCientifico" class="formInput"
+                            placeholder="Nome Cientifico" required />
+
+                        <label class="label" for="tipo">Tipo:</label>
+                        <select class="formInput" id="tipo" name="tipo" required>
+                            <option value="ANFIBIO">Anfibio</option>
+                            <option value="AVE">Ave</option>
+                            <option value="INVERTEBRADOS">Invertebrado</option>
+                            <option value="MAMIFERO">Mamifero</option>
+                            <option value="REPTIL">Reptil</option>
+                        </select>
+
+                        <label class="label" for="imagem">URL da imagem:</label>
+                        <input type="text" name="imagem" id="imagem" class="formInput" placeholder="URL da imagem"
+                            required />
+
+                        <label class="label" for="descricao">Descrição:</label>
+                        <textarea class="formArea" cols="30" rows="4" id="descricao" name="descricao"
+                            placeholder="Descrição" required></textarea>
+
+                        <input type="submit" class="submitButton" name="submitButton" value="Cadastrar Flora">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="orCircle">or</div>
+    </div>
+
+    <div class="listaAnimais">
+        <h1>Lista de Animais</h1>
+        <form id="filtro">
+            <label class="labelFiltro" for="filtroTipo">tipo:</label>
+            <select class="formInputFiltro" id="filtroTipo" name="tipo" required>
+                <option value="ANFIBIO">Anfibio</option>
+                <option value="AVE">Ave</option>
+                <option value="INVERTEBRADOS">Invertebrado</option>
+                <option value="MAMIFERO">Mamifero</option>
+                <option value="REPTIL">Reptil</option>
+                <option value="">Todos</option>
+            </select>
+            <input type="submit" class="submitButtonFiltro" name="submitButtonFiltro" value="Filtrar">
+        </form>
+
+        <table id="minhaTabela" class="container">
+            <thead>
+                <tr>
+                    <th>
+                        <h1>ID</h1>
+                    </th>
+                    <th>
+                        <h1>NOME</h1>
+                    </th>
+                    <th>
+                        <h1>NOME CIENTIFICO</h1>
+                    </th>
+                    <th id="celula1">
+                        <h1>DESCRIÇÃO</h1>
+                    </th>
+                    <th>
+                        <h1>TIPO</h1>
+                    </th>
+                    <th id="celula2">
+                        <h1>IMAGEM</h1>
+                    </th>
+                    <th>
+                        <h1>AÇÕES</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="botaoMaisItens" class="botaoPadrao mais">&darr;</button>
+    </div>
+
+    <dialog id="dialogo" class="formularioAtualizacao">
+        <button id="fecharDialogo">X</button>
+        <form id="formAnimalAtt">
+            <label class="label" for="nome">Nome:</label>
+            <input type="text" name="nome" id="novoNome" class="formInput" placeholder="Nome" required />
+
+            <label class="label" for="nomeCientifico">Nome Cientifico:</label>
+            <input type="text" name="nomeCientifico" id="novoNomeCientifico" class="formInput"
+                placeholder="Nome Cientifico" required />
+
+            <label class="label" for="tipo">Tipo:</label>
+            <select class="formInput" id="novoTipo" name="tipo" required>
+                <option value="ANFIBIO">Anfibio</option>
+                <option value="AVE">Ave</option>
+                <option value="INVERTEBRADOS">Invertebrado</option>
+                <option value="MAMIFERO">Mamifero</option>
+                <option value="REPTIL">Reptil</option>
+            </select>
+
+            <label class="label" for="imagem">URL da imagem:</label>
+            <input type="text" name="imagem" id="novoImagem" class="formInput" placeholder="URL da imagem" required />
+
+            <label class="label" for="descricao">Descrição:</label>
+            <textarea class="formArea " cols="30" rows="4" id="novoDescricao" name="descricao" placeholder="Descrição"
+                required></textarea>
+
+            <input type="submit" id="btnAtt" class="submitButton" name="submitButton" value="Atualizar Animal">
+        </form>
+    </dialog>
+
+<script src="script/scriptNav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

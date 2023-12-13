@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ambiental</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_index.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a th:href="index.html">
+                <img src="img/logo.png" alt="Logo do Site" />
+            </a>
+        </div>
+
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a th:href="somos">Somos</a></li>
+                <li class="active"><a href="#">Reserva</a>
+                    <ul class="dropdown">
+                        <li><a th:href="fauna">Fauna</a></li>
+                        <li><a href="#">Flora</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="h-right ">
+            <!-- <a href="#">Siga-nos</a> -->
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a th:href="login">Cadastro</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section id="intro" class="section-a">
+        <div class="section-inner">
+            <h4>Em breve</h4>
+            <h2>Projeto educação ambiental</h2>
+
+
+        </div>
+
+        <div class="intro-img">
+            <img src="img/phone_mockup.png" alt="Mockup smartphone com tela de carregamento do aplicativo">
+        </div>
+
+        <div class="scroll-arrow">
+            <svg width="30px" height="30px">
+                <path stroke="#000" fill="none" stroke-width="2px" d="M2.000,5.000 L15.000, 18.000 L28.000,5.000">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="aplicativo" class="fun-facts section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-7">
+                    <div class="section-title">
+                        <h2>Aplicativo <span></span></h2>
+                    </div>
+                    <div class="fun-facts-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus quam voluptates
+                            accusantium voluptatum iste deleniti, dignissimos nostrum labore, itaque, eos aut sunt nihil
+                            magni doloremque. Voluptates asperiores ex minus.</p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="fun-facts-item style-1">
+                                    <h3>3</h3>
+                                    <span>trilhas</span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="fun-facts-item style-2">
+                                    <h3>300</h3>
+                                    <span>especies</span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="fun-facts-item style-3">
+                                    <h3>20</h3>
+                                    <span>Totens</span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="fun-facts-item style-4">
+                                    <h3>&infin;</h3>
+                                    <span>informações</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-5">
+                    <div class="fun-facts-img">
+                        <img src="img/Projeto Remover fundo (1).png" alt="tela smartphone" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="script/scriptIndex.js"></script>
+    <script src="script/scriptNav.js"></script>
+</body>
+
+</html>
